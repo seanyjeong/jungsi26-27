@@ -11,14 +11,7 @@ import {
   getRefreshTokenExpiry,
   type UserPayload,
 } from '@/lib/auth';
-
-// DB 연결 설정
-const dbConfig = {
-  socketPath: '/var/run/mysqld/mysqld.sock',
-  user: 'paca',
-  database: 'univjungsi',
-  charset: 'utf8mb4',
-};
+import { dbConfig } from '@/lib/db';
 
 interface LoginRequest {
   username: string;
