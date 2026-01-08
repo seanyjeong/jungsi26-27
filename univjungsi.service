@@ -1,0 +1,16 @@
+[Unit]
+Description=정시엔진 v2 (univjungsi)
+After=network.target mysql.service
+
+[Service]
+Type=simple
+User=sean
+WorkingDirectory=/home/sean/univjungsi
+ExecStart=/usr/bin/npm run start
+Restart=on-failure
+RestartSec=10
+Environment=NODE_ENV=production
+Environment=PORT=3004
+
+[Install]
+WantedBy=multi-user.target
